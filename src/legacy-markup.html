@@ -1,0 +1,225 @@
+<canvas id="bgc"></canvas>
+<nav id="nav"><a href="#top" class="logo"><i></i>TRUSTBOX<span class="live" title="System online (demo)"></span></a>
+<div class="links" id="links"><a href="#top" class="on">Overview</a><button id="pb" aria-haspopup="true">Platform ▾</button><a href="#tech">Technology</a><a href="#intel">Intelligence</a><a href="#demo">Live Demo</a><a href="#monitoring">Monitoring</a><span id="ind"></span>
+<div class="mega" id="mega" role="menu">
+<div><h4>MONITORING</h4><a href="#demo"><svg viewBox="0 0 24 24"><path d="M3 12h4l3-7 4 14 3-7h4"/></svg><span><b>Live Sensor Monitoring</b><small>Streaming ESP32 readings</small></span></a><a href="#demo"><svg viewBox="0 0 24 24"><path d="M12 21s7-6 7-11a7 7 0 10-14 0c0 5 7 11 7 11z"/></svg><span><b>Shipment Tracking</b><small>Every leg, every event</small></span></a><a href="#tech"><svg viewBox="0 0 24 24"><rect x="6" y="6" width="12" height="12" rx="2"/><path d="M9 2v4M15 2v4M9 18v4M15 18v4"/></svg><span><b>Device Management</b><small>Pair and manage ESP32s</small></span></a></div>
+<div><h4>INTELLIGENCE</h4><a href="#tol"><svg viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-8M22 20H2"/></svg><span><b>Condition Analysis</b><small>Vs product reference data</small></span></a><a href="#intel"><svg viewBox="0 0 24 24"><path d="M12 3l2 5 5 2-5 2-2 5-2-5-5-2 5-2z"/></svg><span><b>AI Damage Assessment</b><small>Plain-language reports</small></span></a><a href="#demo"><svg viewBox="0 0 24 24"><path d="M12 3l10 18H2z"/><path d="M12 10v5"/></svg><span><b>Risk Detection</b><small>Green, amber, red</small></span></a></div>
+<div><h4>PROTECTION</h4><a href="#intel"><svg viewBox="0 0 24 24"><path d="M6 8a6 6 0 0112 0c0 7 3 8 3 8H3s3-1 3-8z"/></svg><span><b>Shipment Alerts</b><small>Instant seller alerts</small></span></a><a href="#intel"><svg viewBox="0 0 24 24"><path d="M9 14L4 9l5-5"/><path d="M4 9h10a6 6 0 010 12h-3"/></svg><span><b>Return Management</b><small>Evidence-backed returns</small></span></a><a href="#why"><svg viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 5-4 8-8 9-4-1-8-4-8-9V6z"/></svg><span><b>Product Safety</b><small>Know before delivery</small></span></a></div>
+</div></div>
+<div class="cta"><a href="#login">Login</a><a class="btn p" href="#demo" style="padding:9px 18px;font-size:14px">Get Started</a><button class="burger" id="bg" aria-label="Open menu">☰</button></div></nav>
+<div id="mm" role="dialog" aria-label="Menu"><button class="burger" id="mc" aria-label="Close">✕</button><a href="#top">Overview</a><a href="#why">Platform</a><a href="#tech">Technology</a><a href="#intel">Intelligence</a><a href="#demo">Live Demo</a><a href="#monitoring">Live Monitoring</a><a href="#login">Login</a></div>
+
+<section class="hero pg" data-p="home" id="top"><div>
+<div class="eyebrow">IoT supply-chain intelligence</div>
+<h1>Your Products Deserve a Safer Journey.</h1>
+<p>Real-time IoT intelligence that monitors every condition, detects potential damage, and protects products throughout transportation.</p>
+<a class="btn p" href="#why">Explore TRUSTBOX</a> <a class="btn" href="#demo">Experience Live Monitoring</a></div>
+<div class="stage" id="stage"><canvas id="cv"></canvas>
+<div class="chip" style="left:12px;top:12px">TEMPERATURE<b id="c1">24.8°C</b></div>
+<div class="chip" style="right:12px;top:12px">HUMIDITY<b id="c2">52.4%</b></div>
+<div class="chip" style="left:12px;top:92px">SHOCK<b id="c3">NORMAL</b></div>
+<div class="chip" style="right:12px;top:92px">DEVICE<b>CONNECTED</b></div>
+<div class="chip" style="left:50%;transform:translateX(-50%);top:12px;padding:5px 9px"><span class="demo">DEMO DATA</span></div>
+<button class="btn" id="ex" style="position:absolute;right:12px;bottom:78px;padding:7px 14px;font-size:12px">Exploded view</button><div id="info"><b>Drag to rotate.</b> Click a sensor sphere to see what it does.</div></div></section>
+
+<section class="pg" data-p="home" id="why"><div class="eyebrow">Why TRUSTBOX</div><h2>A shipment can look perfect on the outside. That doesn’t mean it arrived safely.</h2>
+<p class="mut">Scroll through the journey of one package.</p>
+<div class="steps" id="steps"></div></section>
+
+<section class="pg" data-p="tech" id="tech"><div class="eyebrow">Technology</div><h2>Intelligence Inside Every Package.</h2>
+<p class="mut">Pick a layer to see how it contributes. Same 3D package as above is driven by the simulator below.</p>
+<div class="tabs" id="parts"></div><div class="card" id="pinfo" style="margin-top:16px"></div></section>
+
+<section class="pg" data-p="tech" id="tol"><div class="eyebrow">Condition intelligence</div><h2>Not Every Product Has the Same Tolerance.</h2>
+<p class="mut">Each product is compared against its own reference profile. Values below are configurable demonstration numbers, not universal scientific standards. <span class="demo">DEMO</span></p>
+<div class="tabs" id="cats"></div><div class="tol" id="tolb"></div></section>
+
+<section class="pg" data-p="demo" id="demo"><div class="eyebrow">Shipment intelligence demo</div><h2>See What Your Shipment Experiences.</h2>
+<p class="mut">Simulation environment <span class="demo">SIMULATED — NOT ESP32 READINGS</span></p>
+<div class="tabs" id="scn"></div>
+<div class="sim"><div class="card"><div class="read"><div><small>TEMP</small><b id="rt">—</b></div><div><small>HUMIDITY</small><b id="rh">—</b></div><div><small>SHOCK</small><b id="rs">—</b></div></div>
+<span id="risk" class="safe">● SAFE</span><p class="mut" id="why2" style="margin-top:12px;font-size:14px"></p><ul id="tl"></ul></div>
+<div class="card"><small class="mut">TEMPERATURE &amp; HUMIDITY OVER TIME <span class="demo">DEMO</span></small><svg class="ch" id="chart" viewBox="0 0 400 150" preserveAspectRatio="none"></svg><div style="display:flex;gap:16px;font-size:12px" class="mut"><span style="color:var(--b)">— Temp</span><span style="color:var(--ok)">— Humidity</span><span style="color:var(--rd)">▲ Event</span></div>
+<canvas id="cv2" style="width:100%;height:230px;display:block;margin-top:12px;border-radius:14px;background:var(--l)"></canvas><small class="mut">Live 3D package: it reacts to the selected scenario. Drag the hero package to rotate both.</small></div></div></section>
+
+<section class="pg" data-p="intel" id="intel"><div class="eyebrow">AI intelligence</div><h2>From Raw Sensor Data to Actionable Intelligence.</h2>
+<div class="pipe"><div>ESP32 SENSOR DATA</div><div>BACKEND PROCESSING</div><div>REFERENCE COMPARISON</div><div>CONDITION RISK ANALYSIS</div><div>AI EXPLANATION</div><div>SELLER ALERT</div></div>
+<div class="rep"><div class="card"><h4>MEASURED (SENSOR) <span class="demo">EXAMPLE</span></h4><dl><dt>Shipment</dt><dd>SHIP-101</dd><dt>Timestamp</dt><dd>14:32</dd><dt>Reading</dt><dd>31.6 °C</dd><dt>Expected</dt><dd>15–25 °C (configured)</dd><dt>Severity</dt><dd style="color:var(--am)">Warning → Critical after shock</dd></dl></div>
+<div class="card"><h4>AI-GENERATED INTERPRETATION</h4><p style="font-size:14px">Shipment SHIP-101 experienced a temperature deviation at 14:32. The reading exceeded the configured acceptable range. A subsequent shock event was detected. The shipment has been flagged for inspection.</p><p class="mut" style="font-size:13px;margin-top:10px"><b style="color:var(--ink)">Recommended action:</b> inspect on arrival; hold return decision until reviewed.</p></div></div></section>
+
+<section class="pg" data-p="login" id="login"><div class="card" id="auth" style="max-width:440px;margin:40px auto"></div></section>
+
+<section class="pg" data-p="platform" id="platform"><div class="eyebrow">Platform</div><h2>One platform, from sensor to seller.</h2><p class="mut">Every capability of TRUSTBOX. Open any card.</p><div class="tol" id="pf"></div></section>
+<section class="pg" data-p="roadmap" id="roadmap"><div class="eyebrow">Roadmap</div><h2>What is coming next.</h2><div class="tol" id="rm"></div></section>
+<section class="pg" data-p="monitoring" id="monitoring"><div id="monitoring-root"></div></section>
+<div id="app"></div>
+<footer><div class="fi"><div><div class="logo"><i></i>TRUSTBOX</div><p class="mut" style="margin:10px 0;font-size:14px">Protecting products beyond the packaging.</p><span style="font-size:12px" class="mut"><span class="live" style="display:inline-block"></span> Connection status: demo</span></div>
+<div><h5>PRODUCT</h5><a href="#why">Platform</a><a href="#monitoring">Live Monitoring</a><a href="#intel">Intelligence</a><a href="#tech">Technology</a></div>
+<div><h5>COMPANY</h5><a href="#top">About</a><a href="#login">Contact</a><a href="#roadmap">Roadmap</a><a href="#intel">Documentation</a></div>
+<div><h5>RESOURCES</h5><a href="#intel">API Documentation</a><a href="#tech">Hardware Integration</a><a href="#login">Support</a></div></div></footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script>
+const $=s=>document.querySelector(s),H=(e,h)=>e.innerHTML=h;
+// nav
+const nav=$('#nav'),links=$('#links'),ind=$('#ind'),mega=$('#mega');let ly=0;
+addEventListener('scroll',()=>{const y=scrollY;nav.classList.toggle('c',y>80&&y>ly);if(y<ly)nav.classList.remove('c');ly=y;
+ const cur=curR;
+ [...links.querySelectorAll('a')].forEach(a=>{const on=a.getAttribute('href')==='#'+cur;a.classList.toggle('on',on);if(on)mv(a)})},{passive:true});
+function mv(a){ind.style.left=a.offsetLeft+14+'px';ind.style.width=a.offsetWidth-28+'px'}
+setTimeout(()=>mv(links.querySelector('.on')),100);
+const pb=$('#pb');let t;const op=v=>{clearTimeout(t);mega.classList.toggle('o',v)};
+pb.onmouseenter=()=>op(1);pb.onclick=()=>op(!mega.classList.contains('o'));links.onmouseleave=()=>t=setTimeout(()=>op(0),180);mega.onmouseenter=()=>clearTimeout(t);
+mega.onclick=()=>op(0);addEventListener('keydown',e=>{if(e.key==='Escape'){op(0);$('#mm').classList.remove('o')}});
+$('#bg').onclick=()=>$('#mm').classList.add('o');$('#mc').onclick=()=>$('#mm').classList.remove('o');$('#mm').onclick=e=>{if(e.target.tagName==='A')$('#mm').classList.remove('o')};
+// story
+const S=[['Packaged','Product is sealed and boxed.'],['Device attached','ESP32 joins the package.'],['Shipment begins','Readings stream in.'],['Conditions change','Heat, humidity, handling.'],['Sensors detect','Abnormal event captured.'],['Risk identified','Compared with reference.'],['Seller alerted','Act before delivery.']];
+H($('#steps'),S.map((s,i)=>`<div class="st ${i>3?'x':''}"><b>${s[0]}</b><small>${s[1]}</small></div>`).join(''));
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){setTimeout(()=>e.target.classList.add('v'),[...e.target.parentNode.children].indexOf(e.target)*110)}}),{threshold:.3});
+document.querySelectorAll('.st').forEach(e=>io.observe(e));
+// three
+const cv=$('#cv'),st=$('#stage');const R=new THREE.WebGLRenderer({canvas:cv,antialias:true,alpha:true});R.setPixelRatio(Math.min(devicePixelRatio,2));
+const sc=new THREE.Scene(),cam=new THREE.PerspectiveCamera(40,1,.1,50);cam.position.set(0,1.2,6.2);
+sc.add(new THREE.AmbientLight(0x8899bb,.9));const dl=new THREE.DirectionalLight(0xffffff,1.1);dl.position.set(3,5,4);sc.add(dl);
+const G=new THREE.Group();sc.add(G);
+const box=new THREE.Mesh(new THREE.BoxGeometry(3,2,2),new THREE.MeshStandardMaterial({color:0x24242f,transparent:true,opacity:.22,roughness:.4}));G.add(box);
+G.add(new THREE.LineSegments(new THREE.EdgesGeometry(box.geometry),new THREE.LineBasicMaterial({color:0x8b6bff})));
+const pcb=new THREE.Mesh(new THREE.BoxGeometry(1.5,.08,.9),new THREE.MeshStandardMaterial({color:0x0f6b4a}));pcb.position.y=-.5;G.add(pcb);
+const chip=new THREE.Mesh(new THREE.BoxGeometry(.5,.1,.5),new THREE.MeshStandardMaterial({color:0x222}));chip.position.set(0,-.43,0);G.add(chip);
+const prod=new THREE.Mesh(new THREE.BoxGeometry(1,.6,.8),new THREE.MeshStandardMaterial({color:0xc9d3e6}));prod.position.set(0,.2,0);G.add(prod);
+const SN=[['Temperature sensor','Reads ambient temperature. TRUSTBOX compares it with the product’s reference range.',[-.9,-.3,.5],0xff7a45],['Humidity sensor','Reads relative humidity to catch moisture risk over time.',[.9,-.3,.5],0x2ee59d],['Shock / vibration sensor','Detects impacts and vibration patterns from rough handling.',[0,-.3,-.6],0xffb020]];
+const spheres=SN.map(s=>{const m=new THREE.Mesh(new THREE.SphereGeometry(.14,20,20),new THREE.MeshStandardMaterial({color:s[3],emissive:s[3],emissiveIntensity:.5}));m.position.set(...s[2]);m.userData=s;G.add(m);
+ const l=new THREE.Line(new THREE.BufferGeometry().setFromPoints([new THREE.Vector3(...s[2]),new THREE.Vector3(0,-.45,0)]),new THREE.LineBasicMaterial({color:s[3]}));G.add(l);return m});
+const led=new THREE.Mesh(new THREE.SphereGeometry(.1,16,16),new THREE.MeshBasicMaterial({color:0x2ee59d}));led.position.set(1.3,.9,1.05);G.add(led);
+function rs(){const w=st.clientWidth,h=st.clientHeight;R.setSize(w,h,false);cam.aspect=w/h;cam.updateProjectionMatrix()}addEventListener('resize',rs);rs();
+let drag=0,px=0,py=0,vy=.004,ry=0.5,rx=.25,shake=0,moved=0;
+st.onpointerdown=e=>{drag=1;moved=0;px=e.clientX;py=e.clientY;st.setPointerCapture(e.pointerId)};
+st.onpointermove=e=>{if(!drag)return;moved+=Math.abs(e.clientX-px)+Math.abs(e.clientY-py);ry+=(e.clientX-px)*.01;rx=Math.max(-1,Math.min(1,rx+(e.clientY-py)*.01));px=e.clientX;py=e.clientY};
+st.onpointerup=e=>{drag=0;if(moved<6)pick(e)};
+const rc=new THREE.Raycaster();function pick(e){const r=cv.getBoundingClientRect();rc.setFromCamera({x:(e.clientX-r.left)/r.width*2-1,y:-((e.clientY-r.top)/r.height)*2+1},cam);const h=rc.intersectObjects(spheres)[0];
+ if(h){const d=h.object.userData;H($('#info'),`<b>${d[0]}</b> — ${d[1]}`)}}
+for(let i=0;i<10;i++)for(const z of[-.42,.42]){const p=new THREE.Mesh(new THREE.BoxGeometry(.05,.1,.05),new THREE.MeshStandardMaterial({color:0xd4af37,metalness:.8,roughness:.3}));p.position.set(-.6+i*.13,.06,z);pcb.add(p)}
+const ant=new THREE.Mesh(new THREE.BoxGeometry(.3,.02,.5),new THREE.MeshStandardMaterial({color:0xcfd8e8}));ant.position.set(.62,.05,0);pcb.add(ant);
+function tag(t,c){const k=document.createElement('canvas');k.width=256;k.height=64;const x=k.getContext('2d');x.font='600 30px ui-monospace,monospace';x.fillStyle=c;x.textAlign='center';x.fillText(t,128,42);const s=new THREE.Sprite(new THREE.SpriteMaterial({map:new THREE.CanvasTexture(k),transparent:true,depthTest:false}));s.scale.set(1,.25,1);return s}
+[['ESP32','#9fc4ff',pcb,[0,.5,0]],['TEMP','#ff9a6b',spheres[0],[0,.3,0]],['HUM','#2ee59d',spheres[1],[0,.3,0]],['SHOCK','#ffb020',spheres[2],[0,.3,0]]].forEach(a=>{const s=tag(a[0],a[1]);s.position.set(...a[3]);a[2].add(s)});
+function glow(hex,sz){const k=document.createElement('canvas');k.width=k.height=64;const x=k.getContext('2d'),g=x.createRadialGradient(32,32,0,32,32,32);g.addColorStop(0,'#fff');g.addColorStop(1,'rgba(255,255,255,0)');x.fillStyle=g;x.fillRect(0,0,64,64);const s=new THREE.Sprite(new THREE.SpriteMaterial({map:new THREE.CanvasTexture(k),color:hex,blending:THREE.AdditiveBlending,transparent:true,depthWrite:false,opacity:.8}));s.scale.set(sz,sz,1);return s}
+spheres.forEach(s=>s.add(glow(s.userData[3],.8)));const lg=glow(0x2ee59d,.7);led.add(lg);
+const cv2=$('#cv2'),R3=new THREE.WebGLRenderer({canvas:cv2,antialias:true,alpha:true}),cam3=new THREE.PerspectiveCamera(40,1,.1,50);cam3.position.set(3.2,2,6.2);cam3.lookAt(0,0,0);
+let exp=0,expT=0;
+$('#ex').onpointerdown=e=>e.stopPropagation();$('#ex').onclick=()=>{expT=expT?0:1;$('#ex').textContent=expT?'Assemble':'Exploded view'};
+const sp=spheres.map(s=>s.position.clone()),lines=G.children.filter(o=>o.isLine&&!o.isLineSegments);
+const pulses=spheres.map((s,i)=>{const m=new THREE.Mesh(new THREE.SphereGeometry(.05,8,8),new THREE.MeshBasicMaterial({color:s.userData[3]}));G.add(m);return{m,s,o:i/3}});
+const R2=new THREE.WebGLRenderer({canvas:$('#bgc'),alpha:true});R2.setPixelRatio(1);const s2=new THREE.Scene(),c2=new THREE.PerspectiveCamera(60,1,.1,100);c2.position.set(0,0,30);
+const pg=new THREE.BufferGeometry(),N2=900,pa=new Float32Array(N2*3);for(let i=0;i<N2*3;i++)pa[i]=(Math.random()-.5)*80;pg.setAttribute('position',new THREE.BufferAttribute(pa,3));
+const pts=new THREE.Points(pg,new THREE.PointsMaterial({color:0xa58bff,size:.14,transparent:true,opacity:.6,blending:THREE.AdditiveBlending,depthWrite:false}));s2.add(pts);
+const grid=new THREE.GridHelper(120,60,0x8b6bff,0x24243a);grid.position.y=-14;grid.material.transparent=true;grid.material.opacity=.22;s2.add(grid);
+function rs2(){R2.setSize(innerWidth,innerHeight,false);c2.aspect=innerWidth/innerHeight;c2.updateProjectionMatrix()}addEventListener('resize',rs2);rs2();
+let mx=0,my=0;addEventListener('pointermove',e=>{mx=e.clientX/innerWidth-.5;my=e.clientY/innerHeight-.5});
+function ext(){exp+=(expT-exp)*.07;const y=-.5-exp*.9;pcb.position.y=y;chip.position.y=y+.07;prod.position.y=.2+exp*.9;box.material.opacity=.22-exp*.12;
+ spheres.forEach((s,i)=>s.position.set(sp[i].x*(1+exp*.7),sp[i].y-exp*.9,sp[i].z*(1+exp*.7)));
+ const tgt=new THREE.Vector3(0,y+.05,0);lines.forEach((l,i)=>l.geometry.setFromPoints([spheres[i].position,tgt]));
+ pulses.forEach(p=>p.m.position.lerpVectors(p.s.position,tgt,(tt*.5+p.o)%1));
+ cam.position.x+=(mx*1.2-cam.position.x)*.05;cam.lookAt(0,0,0);
+ pts.rotation.y=tt*.02+scrollY*.0006+mx*.3;pts.rotation.x=my*.2;grid.position.z=(tt*1.5)%2;R2.render(s2,c2);const q=cv2.getBoundingClientRect();if(q.bottom>0&&q.top<innerHeight){const w=cv2.clientWidth,h=cv2.clientHeight;if(w&&cv2.width!==w){R3.setSize(w,h,false);cam3.aspect=w/h;cam3.updateProjectionMatrix()}R3.render(sc,cam3)}}
+const reduce=matchMedia('(prefers-reduced-motion:reduce)').matches;let tt=0;
+(function loop(){requestAnimationFrame(loop);tt+=.016;if(!drag&&!reduce)ry+=vy;G.rotation.y=ry;G.rotation.x=rx;
+ G.position.x=shake>0?Math.sin(tt*60)*.06*shake:0;shake=Math.max(0,shake-.01);spheres.forEach((s,i)=>s.scale.setScalar(1+.15*Math.sin(tt*3+i)));ext();R.render(sc,cam)})();
+// parts
+const P=[['Outer packaging','Protective shell','Physical carton the product ships in.','Nothing directly — it is the asset being protected.','Context for handling limits.'],['ESP32 microcontroller','Brain + radio','Reads sensors and sends Wi-Fi data to the backend.','Sensor packets, device ID, timestamps.','Ingestion API stores readings per shipment.'],['Temperature sensor','Thermal monitor','Measures temperature over the journey.','°C readings, exposure duration.','Compared with product reference range.'],['Humidity sensor','Moisture monitor','Measures relative humidity.','%RH readings.','Flags moisture risk for sensitive goods.'],['Shock / vibration sensor','Impact monitor','Detects drops, impacts and vibration.','Shock magnitude and count.','Raises critical events for fragile items.'],['GPS module (optional)','Location','Adds position to events.','Coordinates.','Places an event on the route.']];
+H($('#parts'),P.map((p,i)=>`<button data-i="${i}" class="${i?'':'on'}">${p[0]}</button>`).join(''));
+function pi(i){const p=P[i];H($('#pinfo'),`<h3>${p[0]}</h3><p class="mut" style="margin:6px 0 12px">${p[1]}</p><dl style="display:grid;grid-template-columns:auto 1fr;gap:8px 18px;font-size:14px"><dt class="mut">Function</dt><dd>${p[2]}</dd><dt class="mut">Data collected</dt><dd>${p[3]}</dd><dt class="mut">Used for</dt><dd>${p[4]}</dd></dl>`)}
+pi(0);$('#parts').onclick=e=>{if(e.target.dataset.i){[...$('#parts').children].forEach(b=>b.classList.remove('on'));e.target.classList.add('on');pi(e.target.dataset.i)}};
+// categories
+const C={Glass:[['Shock sensitivity',90],['Vibration monitoring',80],['Handling requirements',70]],'Temperature-sensitive':[['Temperature monitoring',95],['Humidity monitoring',60],['Exposure duration',85]],Electronics:[['Temperature',65],['Humidity',75],['Shock exposure',60]]};
+function cat(k){[...$('#cats').children].forEach(b=>b.classList.toggle('on',b.textContent===k));H($('#tolb'),C[k].map(c=>`<div class="card"><small class="mut">${c[0].toUpperCase()}</small><div class="bar"><i style="width:${c[1]}%"></i></div><b>${c[1]}</b><span class="mut"> / 100 priority (demo)</span></div>`).join(''))}
+H($('#cats'),Object.keys(C).map(k=>`<button>${k}</button>`).join(''));$('#cats').onclick=e=>{if(e.target.tagName==='BUTTON')cat(e.target.textContent)};cat('Glass');
+// simulation
+const SC={'Normal journey':{t:[24,25],h:[50,54],s:0,r:0,n:'All readings within the configured range. No action needed.',ev:[]},'Temperature deviation':{t:[24,33],h:[52,55],s:0,r:1,n:'Temperature rose above the configured range for several minutes. Inspect temperature-sensitive goods.',ev:[['Temperature exceeded range',.55]]},'Excessive shock':{t:[24,25],h:[52,53],s:3,r:2,n:'A high-magnitude impact was recorded. Fragile products should be inspected before sale.',ev:[['Shock event',.6]]},'High humidity':{t:[24,26],h:[52,86],s:0,r:1,n:'Humidity climbed past the configured limit; moisture damage is possible.',ev:[['Humidity exceeded range',.5]]},'Multiple abnormal events':{t:[24,34],h:[52,84],s:4,r:2,n:'Temperature, humidity and shock events overlapped. The shipment is flagged for inspection.',ev:[['Temperature exceeded range',.4],['Humidity exceeded range',.55],['Shock event',.75]]}};
+const RK=[['safe','● SAFE',0x2ee59d],['warn','● WARNING',0xffb020],['crit','● CRITICAL',0xff4d5e]];
+H($('#scn'),Object.keys(SC).map(k=>`<button>${k}</button>`).join(''));
+function run(k){const s=SC[k];[...$('#scn').children].forEach(b=>b.classList.toggle('on',b.textContent===k));
+ const t=s.t[1],h=s.h[1];$('#rt').textContent=t+'°C';$('#rh').textContent=h+'%';$('#rs').textContent=s.s?'HIGH ×'+s.s:'NORMAL';
+ $('#c1').textContent=t+'°C';$('#c2').textContent=h+'%';$('#c3').textContent=s.s?'HIGH':'NORMAL';
+ const r=RK[s.r];$('#risk').className=r[0];$('#risk').textContent=r[1];led.material.color.setHex(r[2]);box.material.color.setHex(s.r?r[2]:0x24242f);lg.material.color.setHex(r[2]);if(s.s)shake=1.5;
+ $('#why2').textContent='Simulated analysis: '+s.n;
+ H($('#tl'),['Shipment dispatched',...s.ev.map(e=>e[0]),s.r?'Flagged for inspection':'Delivered, within range'].map((x,i,a)=>`<li style="--c:${i==0||(!s.r&&i==a.length-1)?'var(--ok)':i==a.length-1?RK[s.r][2]&&'var(--rd)':'var(--am)'}">${x}</li>`).join(''));
+ let pt='',ph='',ev='';const N=40;for(let i=0;i<N;i++){const f=i/(N-1),on=f>.35?Math.min(1,(f-.35)/.2):0;const T=s.t[0]+(s.t[1]-s.t[0])*on+Math.sin(i)*.3,Hh=s.h[0]+(s.h[1]-s.h[0])*on+Math.cos(i)*.5;
+  pt+=`${f*400},${140-(T-15)*3.6} `;ph+=`${f*400},${140-(Hh-30)*1.6} `}
+ s.ev.forEach(e=>ev+=`<polygon points="${e[1]*400-6},148 ${e[1]*400+6},148 ${e[1]*400},134" fill="#ff4d5e"/>`);
+ H($('#chart'),`<polyline points="${pt}" fill="none" stroke="#8b6bff" stroke-width="2"/><polyline points="${ph}" fill="none" stroke="#2ee59d" stroke-width="2"/>${ev}`)}
+$('#scn').onclick=e=>{if(e.target.tagName==='BUTTON')run(e.target.textContent)};run('Normal journey');
+const PG={top:'home',why:'home',tech:'tech',tol:'tech',intel:'intel',demo:'demo',login:'login',platform:'platform',roadmap:'roadmap'};
+const APP=['dashboard','shipments','monitor','devices','alerts','returns','settings','products','intelligence','notifications','shop','orders','track','report','users','datasets','audit','security'];
+var ROLE='seller';
+const ROLES={seller:[['dashboard','Overview'],['products','Products'],['shipments','Shipments'],['devices','Devices'],['monitor','Live Monitor'],['intelligence','Intelligence'],['alerts','Alerts'],['returns','Returns'],['notifications','Notifications'],['settings','Settings']],customer:[['shop','Browse Products'],['orders','Order History'],['track','Shipment Tracking'],['report','Report Damage']],admin:[['users','Users'],['dashboard','Platform Analytics'],['datasets','Reference Datasets'],['shipments','Shipments'],['devices','ESP32 Devices'],['audit','Audit Logs'],['security','Security'],['settings','Thresholds & Policy']]};
+const AR={seller:'dashboard',customer:'shop',admin:'users'};
+const PR=[['PRD-1001','Glass vase','Glass','Max shock 4 g','ESP-A1'],['PRD-1002','Vaccine kit','Temperature-sensitive','2-8 C range','ESP-B2'],['PRD-1003','Laptop','Electronics','Humidity under 70%','ESP-C3']];
+const ORD=[['ORD-501','Glass vase','In transit'],['ORD-502','Laptop','Delivered']];
+var curR='top';
+const mh=['monitor','shipments','devices','tol','intel','demo','alerts','returns','why'];
+mega.querySelectorAll('a').forEach((a,i)=>a.href='#'+mh[i]);
+H($('#pf'),[...mega.querySelectorAll('a')].map(a=>'<a class=card href='+a.getAttribute('href')+'>'+a.querySelector('b').outerHTML+'<small class=mut>'+a.querySelector('small').textContent+'</small></a>').join(''));
+pb.insertAdjacentHTML('afterend','');pb.onclick=()=>op(!mega.classList.contains('o'));
+const appEl=$('#app'),cv2home=cv2.parentNode,cv2next=cv2.nextSibling;
+const SH=[['SHIP-101','Glass vase',2],['SHIP-102','Vaccine kit',1],['SHIP-103','Laptop',0],['SHIP-104','Ceramic set',0],['SHIP-105','Chocolates',1]];
+const DV=[['ESP-A1','SHIP-101','Online','2s ago'],['ESP-B2','SHIP-102','Online','5s ago'],['ESP-C3','SHIP-103','Online','1s ago'],['ESP-D4','None','Offline','2h ago']];
+const bd=r=>`<span class=${['safe','warn','crit'][r]} style='padding:3px 10px;border-radius:99px;font-size:12px'>${['Safe','Warning','Critical'][r]}</span>`;
+function route(){let h=(location.hash||'#top').slice(1);const isApp=APP.includes(h);if(!isApp&&!PG[h])h='top';
+ cv2.style.height='230px';cv2home.insertBefore(cv2,cv2next);
+ document.body.classList.toggle('app',isApp);appEl.style.display=isApp?'block':'none';op(0);$('#mm').classList.remove('o');
+ const p=PG[h];document.querySelectorAll('section.pg').forEach(s=>s.classList.toggle('on',!isApp&&s.dataset.p===p));
+ if(isApp){scrollTo(0,0);drawApp(h);return}
+ curR=['top','tech','intel','demo'].includes(h)?h:h==='tol'?'tech':h==='why'?'top':'';
+ const t=document.getElementById(h);rs();setTimeout(()=>{h==='top'||h==='platform'||h==='login'?scrollTo(0,0):t.scrollIntoView({behavior:'smooth'})},30);
+ links.querySelectorAll('a').forEach(x=>{const on=x.getAttribute('href')==='#'+curR;x.classList.toggle('on',on);if(on)mv(x)})}
+function mon(k){run(k);const s=SC[k];
+ $('#ml').innerHTML=[['TEMP',$('#rt').textContent],['HUMIDITY',$('#rh').textContent],['SHOCK',$('#rs').textContent]].map(a=>`<div><small>${a[0]}</small><b>${a[1]}</b></div>`).join('')+`<span class=${$('#risk').className} style='padding:6px 12px;border-radius:99px;font-weight:700;font-size:12px'>${$('#risk').textContent}</span>`;
+ $('#ma').textContent='Simulated analysis: '+s.n;$('#tl2').innerHTML=$('#tl').innerHTML;
+ document.querySelectorAll('[data-sc]').forEach(b=>b.classList.toggle('on',b.dataset.sc===k))}
+function drawApp(h){
+ const T={products:'Products',intelligence:'Intelligence',notifications:'Notifications',shop:'Browse Products',orders:'Order History',track:'Shipment Tracking',report:'Report Damage',users:'Users',datasets:'Reference Datasets',audit:'Audit Logs',security:'Security',dashboard:'Overview',shipments:'Shipments',devices:'Devices',monitor:'Live Monitor',alerts:'Alerts',returns:'Returns',settings:'Settings'};
+ const NV=ROLES[ROLE];
+ const K=(l,v,c)=>`<div class=card><small class=mut>${l}</small><b style='display:block;font-size:30px;color:${c||'var(--ink)'}'>${v}</b></div>`;
+ const tbl=`<div class=card style='margin-top:14px'><small class=mut>CLICK A SHIPMENT TO OPEN ITS 3D MONITOR <span class=demo>DEMO DATA</span></small><table><tr><th>ID<th>PRODUCT<th>STATUS<th>DEVICE</tr>${SH.map((s,i)=>`<tr data-go=monitor><td>${s[0]}<td>${s[1]}<td>${bd(s[2])}<td>${DV[i]?DV[i][0]:'-'}</tr>`).join('')}</table></div>`;
+ const B={
+ dashboard:`<div class=kp>${K('Active shipments',5)}${K('Safe',2,'var(--ok)')}${K('Warning',2,'var(--am)')}${K('Compromised',1,'var(--rd)')}${K('ESP32 online','3/4')}</div>${tbl}`,
+ shipments:tbl,
+ devices:`<div class=card><small class=mut>REGISTERED ESP32 DEVICES <span class=demo>DEMO</span></small><table><tr><th>DEVICE<th>SHIPMENT<th>STATE<th>LAST SEEN</tr>${DV.map(d=>`<tr><td>${d[0]}<td>${d[1]}<td style='color:${d[2]=='Online'?'var(--ok)':'var(--rd)'}'>${d[2]}<td>${d[3]}</tr>`).join('')}</table></div><div class=card style='margin-top:14px;display:flex;gap:10px;flex-wrap:wrap'><input id=pid placeholder='New device ID, e.g. ESP-E5'><button class='btn p' data-pair>Pair device</button><span class=mut style='font-size:13px;align-self:center'>Sensors per device: temperature, humidity, shock/vibration. 3D view lives in Live Monitor.</span></div>`,
+ monitor:`<div class=mon><div class=card><h3>SHIP-101</h3><p class=mut style='font-size:13px;margin-bottom:10px'>Glass vase | ESP-A1 <span class=demo>SIMULATED</span></p><div class=read id=ml></div></div><div class=card><div id=mon3></div><div class=tabs>${Object.keys(SC).map(k=>`<button data-sc='${k}'>${k}</button>`).join('')}<button data-ex>Exploded view</button></div></div><div class=card><small class=mut>AI ANALYSIS</small><p id=ma class=mut style='margin-top:8px;font-size:14px'></p></div></div><div class=card style='margin-top:14px'><small class=mut>EVENT TIMELINE</small><ul id=tl2 style='list-style:none;padding:0'></ul></div>`,
+ alerts:`<div class=card><small class=mut>RECENT ALERTS <span class=demo>DEMO</span></small><table>${SH.filter(s=>s[2]).map(s=>`<tr data-go=monitor><td>${bd(s[2])}<td>${s[0]}<td>${s[2]>1?'Shock event above threshold':'Reading outside configured range'}</tr>`).join('')}</table></div>`,
+ returns:`<div class=card><small class=mut>RETURN WORKFLOW <span class=demo>DEMO</span></small><table><tr><th>ID<th>SHIPMENT<th>REASON<th>STATUS</tr><tr><td>RET-21<td>SHIP-101<td>Shock exceeded threshold<td>Inspection pending</tr><tr><td>RET-22<td>SHIP-102<td>Temperature deviation<td>Awaiting seller</tr></table></div>`,
+ settings:`<div class=card style='display:grid;gap:14px;max-width:520px'><small class=mut>CONDITION THRESHOLDS (CONFIGURABLE, DEMO)</small><label>Max temperature C <input type=range min=20 max=45 value=30 oninput='this.nextElementSibling.textContent=this.value'><b>30</b></label><label>Max humidity % <input type=range min=40 max=95 value=70 oninput='this.nextElementSibling.textContent=this.value'><b>70</b></label><label>Shock limit g <input type=range min=1 max=10 value=4 oninput='this.nextElementSibling.textContent=this.value'><b>4</b></label></div>`,
+ products:`<div class=card><small class=mut>PRODUCTS <span class=demo>DEMO</span></small><table><tr><th>ID<th>NAME<th>CATEGORY<th>SAFETY<th>DEVICE<th></tr>${PR.map((p,i)=>`<tr><td>${p[0]}<td>${p[1]}<td>${p[2]}<td>${p[3]}<td>${p[4]}<td><button class=btn data-ship=${i} style='padding:5px 12px;font-size:12px'>Initiate shipment</button></tr>`).join('')}</table></div><div class=card style='margin-top:14px;display:flex;gap:10px;flex-wrap:wrap'><input id=pn placeholder='Product name'><input type=file accept='image/*'><select id=pc><option>Glass<option>Temperature-sensitive<option>Electronics</select><input id=ps placeholder='Safety requirement'><select id=pd>${DV.map(d=>`<option>${d[0]}`).join('')}</select><button class='btn p' data-addp>Add product (ID auto-generated)</button></div>`,
+ intelligence:`<div class=kp>${SH.map(s=>K(s[0]+' condition score',(100-s[2]*35)+'%',['var(--ok)','var(--am)','var(--rd)'][s[2]])).join('')}</div><div class=card style='margin-top:14px'><small class=mut>AI-GENERATED REPORT <span class=demo>EXAMPLE</span></small><p style='margin-top:8px;font-size:14px'>Shipment SHIP-101 experienced a temperature deviation at 14:32. The reading exceeded the configured range. A subsequent shock event was detected. The shipment is flagged for inspection.</p><small class=mut>Sensor values are measurements. This text is an AI interpretation against the product reference dataset.</small></div>`,
+ notifications:`<div class=card style='display:grid;gap:12px;max-width:560px'><small class=mut>ALERT CHANNELS <span class=demo>DEMO</span></small>${['Temperature alerts','Humidity alerts','Shock alerts','Device disconnection alerts','Critical shipment alerts','Return notifications','Email notifications'].map(n=>`<label style='display:flex;gap:10px;align-items:center'><input type=checkbox checked>${n}</label>`).join('')}</div>`,
+ shop:`<div class=tol>${PR.map((p,i)=>`<div class=card><small class=mut>${p[2].toUpperCase()}</small><h3>${p[1]}</h3><p class=mut style='font-size:13px;margin:6px 0 12px'>${p[0]} | ${p[3]}</p><button class='btn p' data-buy=${i}>Place order</button></div>`).join('')}</div>`,
+ orders:`<div class=card><small class=mut>YOUR ORDERS <span class=demo>DEMO</span></small><table><tr><th>ORDER<th>PRODUCT<th>STATUS</tr>${ORD.map(o=>`<tr><td>${o[0]}<td>${o[1]}<td>${o[2]}</tr>`).join('')}</table></div>`,
+ track:`<div class=tol>${ORD.map(o=>{const s=SH.find(x=>x[1]==o[1]);return `<div class=card><small class=mut>${o[0]}</small><h3>${o[1]}</h3><p style='margin:8px 0'>Condition: ${bd(s?s[2]:0)}</p><small class=mut>${o[2]} | simulated condition status</small></div>`}).join('')}</div>`,
+ report:`<div class=card style='display:grid;gap:10px;max-width:520px'><small class=mut>REPORT A DAMAGED PRODUCT</small><select>${ORD.map(o=>`<option>${o[0]} ${o[1]}`).join('')}</select><input placeholder='Describe the damage'><button class='btn p' data-rep>Submit report</button></div>`,
+ users:`<div class=card><small class=mut>SELLERS AND CUSTOMERS <span class=demo>DEMO</span></small><table><tr><th>NAME<th>ROLE<th>STATUS</tr><tr><td>Demo Seller<td>Seller<td>Active</tr><tr><td>Demo Customer<td>Customer<td>Active</tr><tr><td>Platform Admin<td>Admin<td>Active</tr></table></div>`,
+ datasets:`<div class=card><small class=mut>REFERENCE DATASETS (CONFIGURABLE DEMO VALUES)</small><table><tr><th>CATEGORY<th>TEMP<th>HUMIDITY<th>SHOCK</tr><tr><td>Glass<td>No limit<td>n/a<td>4 g</tr><tr><td>Temperature-sensitive<td>2-8 C<td>under 60%<td>2 g</tr><tr><td>Electronics<td>5-35 C<td>under 70%<td>3 g</tr></table></div>`,
+ audit:`<div class=card><small class=mut>AUDIT LOG <span class=demo>DEMO</span></small><table><tr><td>14:32<td>ESP-A1<td>Temperature deviation recorded</tr><tr><td>14:35<td>ESP-A1<td>Shock event recorded</tr><tr><td>14:40<td>Seller<td>Return requested for SHIP-101</tr><tr><td>15:02<td>Admin<td>Threshold updated</tr></table></div>`,
+ security:`<div class=card><small class=mut>SECURITY CHECKLIST (BACKEND WORK, NOT IN THIS PROTOTYPE)</small><table>${['Supabase database and secure auth','Role-based permissions','ESP32 device authentication','HTTPS communication','Sensor data validation','Database access policies (RLS)','Audit logs'].map(x=>`<tr><td>${x}<td class=mut>Implement in backend</tr>`).join('')}</table></div>`};
+ appEl.innerHTML=`<div class=shell><aside class=side><a href='#top' class=logo><i></i>TRUSTBOX</a>${NV.map(n=>`<a href='#${n[0]}' class='${n[0]===h?'on':''}'>${n[1]}</a>`).join('')}<a href='#top' style='margin-top:auto'>Public site</a></aside><main><div class=top><span class=mut>TRUSTBOX / <b style='color:var(--ink)'>${T[h]}</b></span><input placeholder='Search shipments, devices'><span>&#128276;</span><span><i class=live style='display:inline-block;margin-right:6px'></i>3/4 devices <span class=demo>DEMO</span></span><select id=role style='margin-left:auto'>${['seller','customer','admin'].map(r=>`<option ${r==ROLE?'selected':''}>${r}`).join('')}</select><span class=av style='margin-left:0'>${ROLE[0].toUpperCase()}</span></div>${NV.some(n=>n[0]===h)?B[h]:`<div class=card><b>Access denied</b><p class=mut>The ${ROLE} role cannot open this page. Role-based access demo.</p></div>`}</main></div>`;
+ if(h==='monitor'){$('#mon3').appendChild(cv2);cv2.style.height='380px';mon('Normal journey')}}
+appEl.onclick=e=>{const g=e.target.closest('[data-go]');if(g){location.hash=g.dataset.go;return}
+ if(e.target.dataset.sc)mon(e.target.dataset.sc);if(e.target.hasAttribute('data-ex'))expT=expT?0:1;
+ if(e.target.hasAttribute('data-pair')){const v=$('#pid').value.trim();if(v){DV.push([v,'None','Online','just now']);drawApp('devices')}}};
+H($('#rm'),['Courier API integration','QR-based product tracking','Digital condition certificate','Downloadable reports','Product authenticity verification','Live shipment map','WhatsApp notifications','Predictive damage analytics'].map(x=>`<div class=card><span class=demo>PLANNED</span><h3 style='margin-top:10px'>${x}</h3></div>`).join(''));
+function authView(m){const I=(p,t)=>`<input placeholder='${p}' type=${t||'text'}>`,L=(k,t)=>`<a data-m=${k} style='color:var(--b);cursor:pointer'>${t}</a>`;
+ const V={login:`<h2 style='font-size:28px'>Sign in</h2>${I('Email','email')}${I('Password','password')}<select id=ar><option value=seller>Seller</option><option value=customer>Customer</option><option value=admin>Admin</option></select><button class='btn p' data-in>Sign in</button><button class=btn data-in>Continue with Google</button>${L('forgot','Forgot password?')}<span class=mut>New? ${L('seller','Register as seller')} or ${L('customer','customer')}</span>`,
+ seller:`<h2 style='font-size:28px'>Seller registration</h2>${I('Business name')}${I('Email','email')}${I('Password','password')}<button class='btn p' data-reg=seller>Create seller account</button>${L('login','Back to sign in')}`,
+ customer:`<h2 style='font-size:28px'>Customer registration</h2>${I('Full name')}${I('Email','email')}${I('Password','password')}<button class='btn p' data-reg=customer>Create customer account</button>${L('login','Back to sign in')}`,
+ forgot:`<h2 style='font-size:28px'>Reset password</h2>${I('Email','email')}<button class='btn p' data-m=login>Send reset link (demo)</button>${L('login','Back')}`,
+ verify:`<h2 style='font-size:28px'>Verify your email</h2><p class=mut>A verification link would be emailed here. Demo only.</p><button class='btn p' data-in>I have verified, continue</button>`};
+ const a=$('#auth');a.style.display='grid';a.style.gap='12px';a.innerHTML=V[m]}
+$('#auth').onclick=e=>{const t=e.target,d=t.dataset;if(d.m)authView(d.m);if(d.reg){ROLE=d.reg;authView('verify')}if('in' in d){if($('#ar'))ROLE=$('#ar').value;location.hash=AR[ROLE]}};
+authView('login');
+appEl.addEventListener('click',e=>{const d=e.target.dataset;
+ if('addp' in d){const n=$('#pn').value.trim();if(n){PR.push(['PRD-'+(1001+PR.length),n,$('#pc').value,$('#ps').value||'Not set',$('#pd').value]);drawApp('products')}}
+ if(d.ship!==undefined){const p=PR[d.ship];SH.push(['SHIP-'+(101+SH.length),p[1],0]);location.hash='shipments'}
+ if(d.buy!==undefined){const p=PR[d.buy];ORD.push(['ORD-'+(501+ORD.length),p[1],'Placed']);location.hash='orders'}
+ if('rep' in d)e.target.textContent='Report submitted (demo)'});
+appEl.onchange=e=>{if(e.target.id==='role'){ROLE=e.target.value;const nh=AR[ROLE];if(location.hash==='#'+nh)route();else location.hash=nh}};
+addEventListener('hashchange',route);route();
+</script>
